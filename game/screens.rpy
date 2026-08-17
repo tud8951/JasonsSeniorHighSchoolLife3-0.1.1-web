@@ -243,7 +243,6 @@ screen quick_menu():
             textbutton _("历史") action ShowMenu('history') activate_sound "audio/yinxiao/03_button.wav"
             textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True) activate_sound "audio/yinxiao/03_button.wav"
             textbutton _("自动") action Preference("auto-forward", "toggle") activate_sound "audio/yinxiao/03_button.wav"
-            textbutton _("好感") action Show("affection_panel") text_color "#ff87b8" activate_sound "audio/yinxiao/01_button.wav"
             textbutton _("保存") action ShowMenu('save') activate_sound "audio/yinxiao/03_button.wav"
             # textbutton _("快存") action QuickSave()
             # textbutton _("快读") action QuickLoad()
@@ -1552,7 +1551,6 @@ screen quick_menu():
             textbutton _("回退") action Rollback() activate_sound "audio/yinxiao/03_button.wav"
             textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True) activate_sound "audio/yinxiao/03_button.wav"
             textbutton _("自动") action Preference("auto-forward", "toggle") activate_sound "audio/yinxiao/03_button.wav"
-            textbutton _("好感") action Show("affection_panel") text_color "#ff87b8" activate_sound "audio/yinxiao/01_button.wav"
             textbutton _("菜单") action ShowMenu() activate_sound "audio/yinxiao/03_button.wav"
 
 

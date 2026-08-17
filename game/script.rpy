@@ -1,30 +1,41 @@
-﻿define j = Character("杰森")
-define cg = Character("葱哥", who_font="XuanZongTi.otf", what_font="XuanZongTi.otf")
-define c = Character("蔡忆梦", who_font="XCDUANZHUANGSONGTI.ttf", what_font="XCDUANZHUANGSONGTI.ttf")
-define k = Character("康乃馨", who_font="XCDUANZHUANGSONGTI.ttf", what_font="XCDUANZHUANGSONGTI.ttf")
-define sz = Character("邵湛")
-define lh = Character("刘昊")
-define zyy = Character("张依依")
-define bz = Character("班长")
-define ty = Character("天宇")
-define wlls = Character("物理老师")
-define hxls = Character("化学老师")
-define jw = Character("纪委")
-define yy = Character("干夭")
+﻿# region Character definitions
+define j = Character("杰森")
+define sf = Character("四风")
+define d = Character("丁真")
+define jg = Character("教官")
+define c = Character("蔡忆梦")
 define someone = Character("某人")
 define syq = Character("三月七")
+define gg = Character("刚哥")
 define x = Character("小帕")
-define ld = Character("卢丹")
-define hy = Character("海燕")
-define sj = Character("树君")
+define m = Character("马厂")
+define cg = Character("葱哥")
+define jh = Character("荆华", who_font="STFANGSO.TTF", what_font="STFANGSO.TTF")
+define hy = Character("海燕老师")
+define sj = Character("树君老师")
+define ld = Character("卢丹（年级主任）")
+define sz = Character("邵湛")
+define ty = Character("天宇")
+define yy = Character("干夭")
+define jw = Character("十二班纪委")
 define yf = Character("扬帆")
-define txj = Character("同学甲")
-define txy = Character("同学乙")
+define wlls = Character("物理老师")
+define hxls = Character("化学老师")
 define lsy = Character("李时雨")
+define knx = Character("康乃馨")
+define zhw = Character("赵宏伟")
+define xq = Character("小曲")
+define hky = Character("韩子瑶")
+define xian = Character("刘昊（大仙）")
+define zyy = Character("张依依")
+define stt = Character("单桐桐")
+define pxy = Character("朴欣怡")
+define classmate_a = Character("同学甲")
+define classmate_b = Character("同学乙")
 define dy = Character("店员")
-define someone = Character("某些同学")
+#endregion
 
-
+# region Image definitions
 image Sun:
     "images/sun.jpg"
     zoom 3
@@ -154,7 +165,28 @@ image qqxh:
 image dly:
     "images/dly520.png"
     zoom 1
+image glasses:
+    "images/glasses.jpg"
+    zoom 0.8
+    xanchor 0.5
+    yanchor 0.5
+    xpos 960
+    ypos 580
+image kang:
+    "images/kang.jpg"
+    zoom 0.2
+    xanchor 0.5
+    yanchor 0.5
+    xpos 960
+    ypos 480
+image mx1:
+    "images/mx1.png"
+    zoom 0.8
+image mx2:
+    "images/mx2.png"
+    zoom 0.8
 
+#endregion
 
 label start:
    
@@ -187,8 +219,8 @@ label game_1:
     with fade
     play music "audio/soft7.mp3" fadein 1.0
     "来到六班后，杰森和葱哥坐在教室后排，班里的同学都好奇地朝他们看了过来。"
-    txj "后面那两个人是谁啊？"
-    txy "不清楚，应该是转班过来的吧。"
+    classmate_a "后面那两个人是谁啊？"
+    classmate_b "不清楚，应该是转班过来的吧。"
     "六班里有杰森以前的同学———蔡忆梦和小帕，还有上学期一起打舞萌认识的邵湛。"
     "蔡忆梦看到杰森时十分惊讶，没想到他真的转来了。"
     c "哈喽哈喽，杰森，你们俩怎么来我们班了？"
@@ -509,29 +541,15 @@ label game_10:
     menu:
         "杰森去了趟超市"
         "自己买一瓶饮料":
-            $ add_affection("cong_ge", -5)
-            "由于没给葱哥买，他对你的好感下降了5点"
+            "由于没给葱哥买，他对你的好感下降"
         "买两瓶饮料，一瓶给葱哥":
-            $ add_affection("cong_ge", +1)
-            $ add_affection("wallet", -5)
-            "葱哥好感度 + 1"
-            "钱包 -5"
-        "买三瓶饮料，分别给邵湛和葱哥":
-            $ add_affection("shao_zhan", +5)
-            $ add_affection("cong_ge", +5)
-            $ add_affection("wallet", -10)
-            "邵湛和葱哥好感度 + 5"
-            "钱包 - 10"
+            "葱哥好感增加"
     "吃完饭后他去幸运咖买了两个冰淇淋，分别送给了葱哥和邵湛。"
-    $ add_affection("wallet", -5)
-    "钱包 - 5"
     scene yd
     with fade
     "饭后他俩来到三楼。"
     j "邵哥，我请你吃个冰淇淋。"
     sz "谢了。"
-    $ add_affection("shao_zhan", +1)
-    "邵湛好感度 + 1"
     "之后杰森和邵湛玩了两次舞萌 DX，便带着葱哥打车离开了。"
     scene outschool
     with fade
@@ -540,15 +558,9 @@ label game_10:
         "猜猜他俩谁能赢"
         "邵湛":
             "猜对，邵湛完虐葱哥"
-            $ add_affection("shao_zhan", +1)
-            $ add_affection("cong_ge", -1)
-            "邵湛好感度 +1"
-            "葱哥好感度 -1"
 
         "葱哥": 
             "葱哥完败"
-            $ add_affection("shao_zhan", -1)
-            "邵湛好感度 -1"
             
     scene classroom2
     with fade
@@ -558,12 +570,9 @@ label game_10:
     "在全班一片哄笑声中，邵湛直接红温了。"
     menu:
         "和同学一起笑":
-            $ add_affection("shao_zhan", -5)
-            "邵湛好感度 -5"
+            sz "你笑啥啊，杰森"
         "安慰":
             sz "我没事啊，让她说去呗。"
-            $ add_affection("shao_zhan", +5)
-            "邵湛好感度 +5"
     scene haoxianglai
     with fade
     play music "audio/soft2.mp3" fadein 1.0
@@ -611,8 +620,6 @@ label game_11:
     play music "audio/soft.mp3" fadein 1.0
     "今天杰森像往常一样打开王者荣耀，刚登录就看到邮件提示——邵湛送了他一个价值18.8元的朵莉亚520限定皮肤按键。"
     "杰森自从2023年买完皮肤后，就一直没舍得花钱买按键，收到这份惊喜，他立刻找到邵湛，满心感激地向他表达了谢意。"
-    $ add_affection("shao_zhan", +10)
-    "杰森对邵湛好感度 +10"
     scene classroom
     with fade
     "转眼就到了开学日，三月九日星期一，杰森迎来了本学期的第一节微机课。"
@@ -644,10 +651,149 @@ label game_11:
         "要一瓶饮料":
             pass
     "杰森随手拿了一瓶茶萃，邵湛付完款后，直接把茶萃递给了杰森。"
-
+    "杰森一开盖发现中了一元乐享，邵湛把饭卡给他，他又去买了一瓶。"
+    scene outschool2
+    with fade
+    "晚上，邵湛给杰森 10 元，请他吃路边摊，杰森买了两个小鸡蛋饼。"
+    scene classroom3
+    with fade
+    "晚课下课，杰森跟邵湛聊天，聊到了干夭，让康乃馨听到了。"
+    knx "你们说的是那个白白的，可可爱爱的小干夭吗？"
+    j "我去，你竟然认识他啊？"
+    knx "他是我小学同学，小学时他小小的很可爱。"
+    j "他是我初中最好的兄弟，要加个 VX 吗？我有他初中的照片。"
+    knx "好啊。"
+    "晚上杰森加了康乃馨的 VX，给他发了几张干夭的照片。"
 
     menu:
-        j "2026年4月12日下午20点32分，今天就更新到这里吧！我累了！还剩2页半的剧情3月分就过一半了。"
+        "三月十日":
+            jump game_12
+
+label game_12:
+
+    scene canteen
+    with fade
+    play music "audio/soft7.mp3" fadein 1.0
+
+    "早上第二节下课，邵湛带着杰森去食堂买鸡腿，偶遇一个杰森的兄弟韩子瑶。"
+    j "韩姐，你这眼镜挺帅啊。"
+
+    scene playground
+    with fade
+    show glasses
+    "韩子瑶把一个很酷的墨镜借给了杰森，杰森上体育课一戴，回头率可高了。"
+
+    scene classroom2
+    with fade
+    "下午自习课，杰森迎来了新座，他的新同桌叫刘昊，外号 “大仙”。"
+    "刘昊从串完座开始就一直跟杰森吹牛逼。"
+    xian "我初中的时候，被 3 个大汉包围，我先给最前的人一脚，然后掏出小刀，解决了另外两个人。"
+    menu:
+        "不信":
+            j "大仙真能吹牛逼"
+            "被刘昊打一顿"
+        "信":
+            j "大仙牛逼"
+            "刘昊很开心，继续和杰森吹牛逼。"
+    "晚课刘昊跟杰森聊嗨了。"
+    xian "给你 10 块钱，你以后就是我兄弟了。"
+    menu:
+        "收下":
+            j "谢谢大仙"
+            "刘昊继续和杰森吹牛逼。"
+        "拒绝":
+            j "大仙，我不要"
+            xian "不行你必须收下"
+    "晚自习，杰森盯着墙上的照片发呆，这些照片是上学期六班同学拍的。"
+    show kang
+    with fade
+    "他看到一张长得很好看的女生的照片，于是问刘昊她是谁？"
+    xian "不知道啊，可能是别的班的吧。"
+    "下课后，杰森跟邵湛说那张照片，邵湛笑着说"
+    hide kang
+    with fade
+    sz "那张是康乃馨啊！她之前朋友圈发过。"
+    j "什么？那是康乃馨？"
+    "杰森难以置信的看向康乃馨，不论是肤色还是发型都不一样啊！"
+    "杰森内心感慨：有种像网恋奔现的感觉。"
+
+    menu:
+        "三月十一日":
+            jump game_13
+
+label game_13:
+
+    scene classroom
+    with fade
+    play music "audio/soft.mp3" fadein 1.0
+
+    "杰森今天上课发呆的时候突然发现，班里男生和男生一座，女生和女生一座。"
+    j "这种排座让多少人羡慕啊！跟同性人当同桌说话不用顾及。"
+
+    scene bgt
+    with fade
+    play music "audio/soft2.mp3" fadein 1.0
+
+    "下午自习课，学校在报告厅举行了开学典礼，有六个主持人，其中有两位是杰森的初中同学。"
+    "杰森跟邵湛聊了 2 个小时，直到活动结束。"
+
+    scene outschool2
+    with fade
+    "晚上杰森花 8 元买了盒路边的盒饭"
+    scene mx2
+    with fade
+    "然后去蜜雪冰城吃，那个饭不能用难吃来形容，只能说是难吃的要死。"
+    show syq
+    "在 17:10 的时候，杰森在蜜雪冰城看到了两个熟悉的面孔，张依依和三月七。"
+    "见到杰森以后依旧互不搭理，像陌生人一样。"
+    hide syq
+    "说实话，三月七不理杰森一定是因为张依依在背后说什么了，要不然不可能变成现在这样，两个最熟悉的人相见犹如陌生人。"
+    scene classroom3
+    with fade
+    "晚二下课，杰森借到小帕的绳子绑在了腿上，充当腿环。"
+    "晚自习杰森一直在发呆，做些什么？"
+    menu:
+        "写日记":
+            jump game_14
+        "抄歌词":
+            jump game_14
+
+label game_14:
+
+    scene haoxianglai
+    with fade
+    play music "audio/soft5.mp3" fadein 1.0
+
+    "中午杰森来到超市，打算为干夭准备实验中学特产，粉色魔爪。"
+    "杰森买了三瓶，分别送给了葱哥和邵湛，干夭的会在两天后的周六送给他。"
+    scene mx2
+    with fade
+    "买完饮料后，杰森来到蜜雪冰城，看邵湛帮他打王者上星。"
+    show df
+    "杰森发现自己的王者师傅在线，于是让邵湛把他拉进来一起玩。"
+    "开局邵湛秒选了一个小乔大王，16/0 顶级中路，带飞全场。"
+    scene classroom
+    with fade
+    "中午回班的时候，杰森又遇到了三月七，双方依旧视而不见，犹如陌生人。"
+    scene classroom2
+    "下午第二节课，老师去开会了，杰森在班里"
+    menu:
+        "写日记":
+            "记录了一下美好生活"
+        "抄歌词":
+            "抄了一些好听的歌词。"
+        "睡觉":
+            "睡了半节课，精神了不少"
+    scene outschool2
+    with fade
+    "晚上杰森吃了个路边摊 5 元小汉堡，邵湛送给杰森一袋奥利奥。"
+    scene classroom3
+    with fade
+    "晚课生物，班长的同桌单桐桐喝了三瓶 RIO 强爽，杰森羡慕死了。"
+    "晚三杰森的前同桌天宇睡觉打呼噜了，被树君录视频发给他妈了。"
+
+    menu:
+        j "2026年8月17日21点02分，今天就更新到这里吧！我累了！还剩4页剧情我上学期写的剧情就没了。"
         "敬请期待":
             $ OpenURL("https://www.bigjackson.vip/game")()
         "退出游戏":

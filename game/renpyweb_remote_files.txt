@@ -1,0 +1,134 @@
+images/1299.png
+image 3052,1373
+images/bag.png
+image 1080,1920
+images/baogaoting.png
+image 2364,1773
+images/blackboard.jpg
+image 800,600
+images/bluearchive.png
+image 512,512
+images/bookstore.jpg
+image 640,480
+images/bus.jpg
+image 640,480
+images/canteen/1.jpg
+image 1280,720
+images/canteen/2.jpg
+image 1280,720
+images/canteen/3.jpg
+image 1280,720
+images/canteen/4.jpg
+image 640,480
+images/carback.png
+image 2730,1535
+images/chinesebook.png
+image 1080,1527
+images/classroom/1.jpg
+image 1280,720
+images/classroom/2.jpg
+image 1280,720
+images/classroom/3.jpg
+image 1280,720
+images/classroom/4.jpg
+image 800,600
+images/classroom/5.jpg
+image 800,600
+images/classroom/6.jpg
+image 800,600
+images/classroom/7.jpg
+image 1280,720
+images/classroom/8.jpg
+image 100,75
+images/classroom/9.jpg
+image 100,75
+images/cloud.jpg
+image 640,480
+images/corridor/1.jpg
+image 800,600
+images/corridor/2.jpg
+image 800,600
+images/corridor/3.jpg
+image 800,600
+images/darkclouds.jpg
+image 1024,768
+images/dfc.png
+image 2364,1773
+images/dly520.png
+image 2800,1260
+images/emptyclassroom/1.jpg
+image 800,600
+images/emptyclassroom/2.jpg
+image 800,600
+images/emptyclassroom/3.jpg
+image 800,600
+images/ercihanshu.jpg
+image 1063,868
+images/glasses.jpg
+image 800,696
+images/haoxianglai.png
+image 2730,1535
+images/kang.jpg
+image 1440,2219
+images/kcb.png
+image 698,487
+images/library/1.jpg
+image 800,600
+images/library/2.jpg
+image 800,600
+images/library/3.jpg
+image 800,600
+images/library/4.jpg
+image 1024,768
+images/luckincafe.png
+image 2364,1773
+images/medicalroom.jpg
+image 1280,720
+images/moon.jpg
+image 1024,768
+images/mx1.png
+image 2848,1600
+images/mx2.png
+image 2848,1600
+images/notes.png
+image 1080,1920
+images/outschool/1 - 副本.jpg
+image 1280,720
+images/outschool/1.jpg
+image 1280,720
+images/outschool/2.jpg
+image 1280,720
+images/outschool/3.jpg
+image 1280,720
+images/playground/1.jpg
+image 1280,720
+images/playground/2.jpg
+image 640,360
+images/playground/3.jpg
+image 640,360
+images/qqxh.png
+image 968,526
+images/room/room.jpg
+image 640,480
+images/room/room3.png
+image 2364,1773
+images/rw/gg.png
+image 1080,1920
+images/rw/jason.png
+image 1080,1920
+images/rw/sj.png
+image 1080,1920
+images/rw/syq.png
+image 1080,1920
+images/snow.jpg
+image 1024,768
+images/sun.jpg
+image 640,480
+images/wanda/1.jpg
+image 640,480
+images/wanda/2.jpg
+image 640,480
+images/wanda/3.jpg
+image 640,480
+images/wanda/4.jpg
+image 640,480
